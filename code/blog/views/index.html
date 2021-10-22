@@ -1,0 +1,35 @@
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{{ include './header.html' }}
+<h1>hello,{{ name }}</h1>
+</body>
+</html>-->
+
+<!--继承layout的内容-->
+{{ extend './layout.html' }}
+
+{{ block 'head' }}
+<style>
+  body {
+    background-color: skyblue;
+  }
+</style>
+{{ /block }}
+
+
+{{ block 'content' }}
+  <h1>index 页面的填坑内容</h1>
+{{ /block }}
+
+
+{{ block 'script' }}
+<script>
+  window.alert('index页面的js脚本')
+</script>
+{{ /block }}
