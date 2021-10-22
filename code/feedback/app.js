@@ -43,7 +43,7 @@ http.createServer(function (req, res) { // 简写方式，该函数会直接被�
     let pathname = parseObj.pathname
 
     if (pathname === '/') {
-      fs.readFile('./views/index.html', function (err, data) {
+      fs.readFile('./artTemplate模板继承和子模版/index.html', function (err, data) {
         if (err) {
           return res.end('404 Not Found.')
         }
@@ -53,7 +53,7 @@ http.createServer(function (req, res) { // 简写方式，该函数会直接被�
         res.end(htmlStr)
       })
     } else if (pathname === '/post') {
-      fs.readFile('./views/post.html', function (err, data) {
+      fs.readFile('./artTemplate模板继承和子模版/post.html', function (err, data) {
         if (err) {
           return res.end('404 Not Found.')
         }
@@ -82,7 +82,7 @@ http.createServer(function (req, res) { // 简写方式，该函数会直接被�
       res.statusCode = 302
       res.setHeader('Location', '/')
       res.end()
-      // fs.readFile('./views/index.html', function (err, data) {
+      // fs.readFile('./artTemplate模板继承和子模版/index.html', function (err, data) {
       //   if (err) {
       //     return res.end('404 Not Found.')
       //   }
@@ -92,7 +92,7 @@ http.createServer(function (req, res) { // 简写方式，该函数会直接被�
       //   res.end(htmlStr)
       // })
     } else {
-      fs.readFile('./views/404.html', function (err, data) {
+      fs.readFile('./artTemplate模板继承和子模版/404.html', function (err, data) {
         if (err) {
           return res.end('404 Not Found.')
         }

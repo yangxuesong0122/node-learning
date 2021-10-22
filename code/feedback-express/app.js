@@ -14,8 +14,8 @@ app.engine('html', require('express-art-template'))
 
 // Express 为 Response 响应对象提供了一个方法：render，render 方法默认是不可以使用，但是如果配置了模板引擎就可以使用了
   // res.render('html模板名', {模板数据})
-    // 第一个参数不能写路径，默认会去项目中的 views 目录查找该模板文件，Express 有一个约定：开发人员把所有的视图文件都放到 views 目录中
-    // 如果想要修改默认的 views 目录，则可以 app.set('views', render函数的默认路径（目录路径）)
+    // 第一个参数不能写路径，默认会去项目中的 artTemplate模板继承和子模版 目录查找该模板文件，Express 有一个约定：开发人员把所有的视图文件都放到 artTemplate模板继承和子模版 目录中
+    // 如果想要修改默认的 artTemplate模板继承和子模版 目录，则可以 app.set('artTemplate模板继承和子模版', render函数的默认路径（目录路径）)
 
 // 配置 body-parser 中间件（插件，专门用来解析表单 POST 请求体）
 // parse application/x-www-form-urlencoded
